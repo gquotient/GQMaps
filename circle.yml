@@ -34,7 +34,7 @@ dependencies:
 database:
   override:
     # replace Circle's generated database.yml
-    - mysql -u ubuntu circle_test < my-database-setup.sql    
+    - mysql -u gqmaps gqmintel < mydb.sql    
 
 ## Customize test commands
 test:
