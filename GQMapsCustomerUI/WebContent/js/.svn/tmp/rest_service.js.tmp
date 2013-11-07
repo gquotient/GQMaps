@@ -1,0 +1,21 @@
+$(document).ready(function() 
+{
+<<<<<<< .mine
+	//$.jStorage.set("jsUrl", "http://192.168.8.15:8080/GQMapsRegistrationServices/");
+	//$.jStorage.set("jsDBUrl", "http://192.168.8.15:8080/GQMapsCustomerServices/");
+	$.jStorage.set("jsUrl", "http://localhost:8080/GQMapsRegistrationServices/");
+	$.jStorage.set("jsDBUrl", "http://localhost:8080/GQMapsCustomerServices/");
+=======
+	$.jStorage.set("jsUrl", "/GQMapsRegistrationServices/");
+	$.jStorage.set("jsDBUrl", "/GQMapsCustomerServices/");
+	//$.jStorage.set("jsUrl", "http://localhost:8080/GQMapsRegistrationServices/");
+	//$.jStorage.set("jsDBUrl", "http://localhost:8080/GQMapsCustomerServices/");
+>>>>>>> .r518
+});
+
+function logout()
+{
+	$.jStorage.flush();
+}
+
+			
