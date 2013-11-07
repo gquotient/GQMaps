@@ -34,7 +34,7 @@ dependencies:
 database:
   override:
     # replace Circle's generated database.yml
-    - mysql -u root gqmintel < mydb.sql    
+    - mysql -u root gqexchange < gqexchange.sql    
 
 ## Customize test commands
 test:
