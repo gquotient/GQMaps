@@ -48,7 +48,7 @@ database:
 test:
   override:
     #- phpunit test/unit-tests # use PHPunit for testing
-    - junit selinium ide.java
+    - junit DKhome8.java
     
   post:
  
