@@ -36,12 +36,13 @@ dependencies:
   # we automatically cache and restore many dependencies between
   # builds. If you need to, you can add custom paths to cache:
   cache_directories:
-    - "custom_1"   # relative to the build directory
-    - "~/custom_2" # relative to the user's home directory
+   # - "custom_1"   # relative to the build directory
+  #  - "~/custom_2" # relative to the user's home directory
 
 ## Customize database setup
 database:
   override:
+  
     # replace Circle's generated database.yml
     #- cp config/database.yml.ci config/database.yml
     #- bundle exec rake db:create db:schema:load
@@ -50,7 +51,9 @@ database:
 test:
   override:
     #- phpunit test/unit-tests # use PHPunit for testing
-    - junit ./DKhome8
+    - java org.junit.runner.JUnitCore DKhome8
+
+    
     
   post:
  
