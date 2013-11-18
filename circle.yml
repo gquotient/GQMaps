@@ -51,7 +51,7 @@ database:
 test:
   override:
     #- phpunit test/unit-tests # use PHPunit for testing
-    - java junit.textui.TestRunner DKhome8
+    - java -classpath ;. org.junit.runner.JUnitCore DKhome8
 
     
     
