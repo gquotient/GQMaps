@@ -19,9 +19,9 @@ checkout:
 environment:
 
   CIRCLE_BRANCH :master
-  PATH :
+  PATH 
      /home/ubuntu/bin
-  HOME :
+  HOME 
     /home/ubuntu
 ## Customize dependencies
 dependencies:
