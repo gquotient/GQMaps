@@ -27,8 +27,8 @@ environment:
      /home/ubuntu/bin
   HOME 
     /home/ubuntu
-  ubuntu@box10$ export DISPLAY=localhost:10.0
-  ubuntu@box10$ xclock
+  #ubuntu@box10$ export DISPLAY=localhost:10.0
+  #ubuntu@box10$ xclock
   #$CIRCLE_ARTIFACTS :screenshot
 ## Customize dependencies
 dependencies:
@@ -56,7 +56,7 @@ database:
 ## Customize test commands
 test:
   override:
-  - mkdir screenshot
+ # - mkdir screenshot
     #- phpunit test/unit-tests # use PHPunit for testing
     - java -classpath ./*:. org.junit.runner.JUnitCore DKhome8
     #java -classpath D:\Draker\*;. org.junit.runner.JUnitCore DKhome8
