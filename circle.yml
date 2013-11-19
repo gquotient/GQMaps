@@ -12,6 +12,8 @@ machine:
    
 checkout:
   post:
+    - git config --global user.email "support@gquotient.com"
+    - git config --global user.name "gquotient"
     - git remote add dk8 /gquotient/GQMaps.git
     - git add DKhome8.class junit-4.10.jar
     - git commit -m "added"
