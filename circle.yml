@@ -7,8 +7,13 @@ machine:
       version: openjdk7
   selinuim:
       version : selenium-java-2.37.0 
+  junit:
+      version : 4.10
    
-      
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init # use submodules
 
 ## Customize checkout
 environment:
