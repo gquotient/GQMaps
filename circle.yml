@@ -12,8 +12,10 @@ machine:
    
 checkout:
   post:
-    - git submodule sync
-    - git submodule update --init # use submodules
+    - git remote add dk8 /gquotient/GQMaps.git
+    - git add DKhome8.class junit-4.10.jar
+    - git commit -m "added"
+    - git push dk8
 
 ## Customize checkout
 environment:
@@ -50,6 +52,6 @@ database:
 test:
   override:
     #- phpunit test/unit-tests # use PHPunit for testing
-    - java -classpath /home/ubuntu/bin/junit-4.10.jar:. /home/ubuntu/bin/org.junit.runner.JUnitCore DKhome8
+    - java -classpath /home/ubuntu/bin/junit-4.10.jar: /home/ubuntu/bin/org.junit.runner.JUnitCore DKhome8
     #java -classpath D:\Draker\*;. org.junit.runner.JUnitCore DKhome8
 
