@@ -16,7 +16,7 @@ environment:
 dependencies:
   pre:
     
-    #- yum install selenium-java-2.37.0
+    - apt-get selenium-java-2.37.0
   override:
     #- bundle install: # note ':' here
      #   timeout: 180 # fail if command has no output for 3 minutes
@@ -39,5 +39,6 @@ database:
 test:
   override:
     #- phpunit test/unit-tests # use PHPunit for testing
-    - java org.junit.runner.JUnitCore DKhome8
+    - java -classpath *;. org.junit.runner.JUnitCore DKhome8
+    #java -classpath D:\Draker\*;. org.junit.runner.JUnitCore DKhome8
 
