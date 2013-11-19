@@ -29,7 +29,7 @@ environment:
     /home/ubuntu
   ubuntu@box10$ export DISPLAY=localhost:10.0
   ubuntu@box10$ xclock
-  $CIRCLE_ARTIFACTS :screenshot
+  $CIRCLE_ARTIFACTS :/screenshot
 ## Customize dependencies
 dependencies:
   pre:
