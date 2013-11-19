@@ -2,33 +2,34 @@
 machine:
 
   timezone:
-    America/Los_Angeles # Set the timezone
-
-
-  # Override /etc/hosts
-  hosts:
-    circlehost: 127.0.0.1
-    dev.mycompany.com: 127.0.0.1
-
-  # Add some environment variables
-  environment:
-    CIRCLE_ENV: test
-    #DATABASE_URL: postgres://ubuntu:@127.0.0.1:5432/circle_test
-    CLASSPATH: .
-    
-  machine:
-    java:
+      America/Los_Angeles 
+  java:
       version: openjdk7
+  selinuim:
+      version : selenium-java-2.37.0 
+  JUnit:
+      version : 4.10
+   
+checkout:
+  post:
+    - git remote add dk8 /gquotient/GQMaps.git
+    - git add DKhome8.class junit-4.10.jar
+    - git commit -m "added"
+    - git push dk8
 
+## Customize checkout
+environment:
 
+  CIRCLE_BRANCH :master
+  PATH 
+     /home/ubuntu/bin
+  HOME 
+    /home/ubuntu
 ## Customize dependencies
 dependencies:
   pre:
     
-    #- npm install coffeescript # install from a different package manager
-    #- gem uninstall bundler # use a custom version of bundler
-    #- gem install bundler --pre
-
+    #- apt-get selenium-java-2.37.0
   override:
     #- bundle install: # note ':' here
      #   timeout: 180 # fail if command has no output for 3 minutes
@@ -51,22 +52,6 @@ database:
 test:
   override:
     #- phpunit test/unit-tests # use PHPunit for testing
-    - java org.junit.runner.JUnitCore DKhome8
+    - java -classpath /home/ubuntu/bin/junit-4.10.jar: /home/ubuntu/bin/org.junit.runner.JUnitCore DKhome8
+    #java -classpath D:\Draker\*;. org.junit.runner.JUnitCore DKhome8
 
-    
-    
-  post:
- 
- 
-## Customize deployment commands
-deployment:
-  staging:
-    branch: master
-    heroku:
-      appname: foo-bar-123
-
-## Custom notifications
-notify:
-  webhooks:
-    # A list of hashes representing hooks. Only the url field is supported.
-   # - url: https://someurl.com/hooks/circle
