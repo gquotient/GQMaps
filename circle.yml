@@ -16,7 +16,7 @@ environment:
 dependencies:
   pre:
     
-    - yum install selenium-java-2.37.0
+    #- yum install selenium-java-2.37.0
   override:
     #- bundle install: # note ':' here
      #   timeout: 180 # fail if command has no output for 3 minutes
