@@ -8,10 +8,9 @@ machine:
       
 
 ## Customize checkout
-checkout:
-  post:
-    - git GQMaps sync
-    - git GQMaps update --init # use submodules
+environment:
+
+  CIRCLE_BRANCH :master
 
 ## Customize dependencies
 dependencies:
