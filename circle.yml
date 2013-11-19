@@ -5,6 +5,9 @@ machine:
       America/Los_Angeles 
   java:
       version: openjdk7
+  selinuim:
+      version : selenium-java-2.37.0 
+   
       
 
 ## Customize checkout
@@ -16,7 +19,7 @@ environment:
 dependencies:
   pre:
     
-    - apt-get selenium-java-2.37.0
+    #- apt-get selenium-java-2.37.0
   override:
     #- bundle install: # note ':' here
      #   timeout: 180 # fail if command has no output for 3 minutes
