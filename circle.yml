@@ -47,6 +47,6 @@ database:
 test:
   override:
     #- phpunit test/unit-tests # use PHPunit for testing
-    - java -classpath -jar junit-4.10 selenium-java-2.37.0 selenium-server-standalone-2.37.0 ;. org.junit.runner.JUnitCore DKhome8
+    - java -classpath -jar junit-4.10.jar ;. org.junit.runner.JUnitCore DKhome8
     #java -classpath D:\Draker\*;. org.junit.runner.JUnitCore DKhome8
 
