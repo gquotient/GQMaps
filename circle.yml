@@ -23,9 +23,9 @@ checkout:
 environment:
 
   CIRCLE_BRANCH :master
-  PATH 
+  PATH :
      /home/ubuntu/bin
-  HOME 
+  HOME :
     /home/ubuntu
   #ubuntu@box10$ export DISPLAY=localhost:10.0
   #ubuntu@box10$ xclock
